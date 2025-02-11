@@ -1,0 +1,9 @@
+service:
+  name: test
+  identifier: test
+  serviceDefinition:
+    type: Kubernetes
+    spec: {}
+  gitOpsEnabled: true
+  orgIdentifier: default
+  projectIdentifier: default_project
