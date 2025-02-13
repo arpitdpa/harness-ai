@@ -9,5 +9,5 @@ infrastructureDefinition:
   spec:
     connectorRef: my_k8s_connector
     namespace: minikube
-    releaseName: "release-abc"    # Static value instead of <+INFRA_KEY_SHORT_ID>
+    releaseName: "release-123"
   allowSimultaneousDeployments: false
