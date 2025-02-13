@@ -1,7 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-deployment
+  name: infra-guestbook-deployment
+  labels:
+    app: guestbook
 spec:
   replicas: 1
   selector:
