@@ -1,13 +1,13 @@
 infrastructureDefinition:
-  name: infra_1
-  identifier: infra_1
-  orgIdentifier: default
-  projectIdentifier: demo_project
-  environmentRef: env_1
-  deploymentType: Kubernetes
-  type: KubernetesDirect
+  name: "infra_1"
+  identifier: "infra_1"
+  orgIdentifier: "default"
+  projectIdentifier: "demo_project"
+  environmentRef: "env_1"
+  deploymentType: "Kubernetes"
+  type: "KubernetesDirect"
   spec:
-    connectorRef: my_k8s_connector
-    namespace: minikube
-    releaseName: release-<+INFRA_KEY_SHORT_ID>
+    connectorRef: "my_k8s_connector"
+    namespace: "minikube"
+    releaseName: "release-123"
   allowSimultaneousDeployments: false
