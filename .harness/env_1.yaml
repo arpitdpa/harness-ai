@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: infra-guestbook-deployment
+  name: infra-deployment
   labels:
-    app: guestbook
+    app: infra-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: guestbook
+      app: infra-app
   template:
     metadata:
       labels:
-        app: guestbook
+        app: infra-app
     spec:
       containers:
-        - name: guestbook
-          image: guestbook:latest
+        - name: infra-container
+          image: nginx:latest
           ports:
             - containerPort: 80
