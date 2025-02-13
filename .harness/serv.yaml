@@ -3,7 +3,25 @@ service:
   identifier: service_1
   serviceDefinition:
     type: Kubernetes
-    spec: {}
+    spec:
+      manifests:
+        - manifest:
+            identifier: harness
+            type: HelmChart
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: harnessgitconnector
+                  gitFetchType: Branch
+                  folderPath: /harness-ai/tree/master
+                  repoName: harness-ai
+                  branch: master
+              subChartPath: ""
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
   gitOpsEnabled: false
   orgIdentifier: default
   projectIdentifier: demo_project
