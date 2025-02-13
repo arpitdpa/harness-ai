@@ -15,7 +15,7 @@ service:
                   connectorRef: harnessgitconnector
                   gitFetchType: Branch
                   paths:
-                    - harness-ai/tree/master/.harness
+                    - arpitdpa/harness-ai/tree/master/.harness
                   repoName: harness-ai
                   branch: master
               skipResourceVersioning: false
