@@ -7,21 +7,19 @@ service:
       manifests:
         - manifest:
             identifier: harness
-            type: HelmChart
+            type: K8sManifest
             spec:
               store:
                 type: Github
                 spec:
                   connectorRef: harnessgitconnector
                   gitFetchType: Branch
-                  folderPath: /harness-ai/tree/master
+                  paths:
+                    - harness-ai/tree/master/.harness
                   repoName: harness-ai
                   branch: master
-              subChartPath: ""
               skipResourceVersioning: false
               enableDeclarativeRollback: false
-              helmVersion: V3
-              fetchHelmChartMetadata: false
   gitOpsEnabled: false
   orgIdentifier: default
   projectIdentifier: demo_project
