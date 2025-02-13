@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: infra-deployment
-  labels:
-    app: infra-app
 spec:
   replicas: 1
   selector:
