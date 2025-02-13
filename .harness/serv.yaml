@@ -15,8 +15,8 @@ service:
                   connectorRef: harnessgitconnector
                   gitFetchType: Branch
                   paths:
-                    - harness-ai-1
-                  repoName: harness-ai-1
+                    - harness
+                  repoName: harness-ai
                   branch: master
               skipResourceVersioning: false
               enableDeclarativeRollback: false
